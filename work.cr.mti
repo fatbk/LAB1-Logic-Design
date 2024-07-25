@@ -1,0 +1,44 @@
+C:/Users/ACER/Downloads/Lab1-20240120T170619Z-001/Lab1/p1hwtb.sv {1 {vlog -work work -sv -stats=none C:/Users/ACER/Downloads/Lab1-20240120T170619Z-001/Lab1/p1hwtb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module p1hwtb
+
+Top level modules:
+	p1hwtb
+
+} {} {}} C:/Users/ACER/Downloads/Lab1-20240120T170619Z-001/Lab1/sumitup.sv {1 {vlog -work work -sv -stats=none C:/Users/ACER/Downloads/Lab1-20240120T170619Z-001/Lab1/sumitup.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module sumitup
+
+Top level modules:
+	sumitup
+
+} {} {}} C:/Users/ACER/Downloads/Lab1-20240120T170619Z-001/Lab1/downstream.sv {1 {vlog -work work -sv -stats=none C:/Users/ACER/Downloads/Lab1-20240120T170619Z-001/Lab1/downstream.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module downstream
+
+Top level modules:
+	downstream
+
+} {} {}} C:/Users/ACER/Downloads/Lab1-20240120T170619Z-001/Lab1/bcdtohex.sv {1 {vlog -work work -sv -stats=none C:/Users/ACER/Downloads/Lab1-20240120T170619Z-001/Lab1/bcdtohex.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module bcdtohex
+-- Compiling module BCDtoSevenSegmentTest
+
+Top level modules:
+	BCDtoSevenSegmentTest
+
+} {} {}} C:/Users/ACER/Downloads/Lab1-20240120T170619Z-001/Lab1/p1.sv {1 {vlog -work work -sv -stats=none C:/Users/ACER/Downloads/Lab1-20240120T170619Z-001/Lab1/p1.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module p1
+
+Top level modules:
+	p1
+
+} {} {}} C:/Users/ACER/Downloads/Lab1-20240120T170619Z-001/Lab1/p1swtb.sv {1 {vlog -work work -sv -stats=none C:/Users/ACER/Downloads/Lab1-20240120T170619Z-001/Lab1/p1swtb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module p1swtb
+
+Top level modules:
+	p1swtb
+
+} {} {}}

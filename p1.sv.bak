@@ -1,0 +1,74 @@
+module p1 // For Altera DE10s board
+	(input	logic	CLOCK_50,
+     input     logic     KEY0,
+     input logic KEY2,
+     output logic LED0,
+     output logic [6:0] HEX3,HEX2, //testbench out
+     output logic [6:0] HEX1,HEX0 //downstream out
+     );
+
+wire [7:0] sum1;   
+wire [7:0] tb_sum;
+wire [7:0] sum;
+wire 	   done;
+wire [7:0] sum_o;
+wire       go_l;
+wire [7:0] value
+
+p1hwtb p1hwtb
+  (.clk(CLOCK_50), 
+   .reset_l(KEY2), 
+   .Button0(KEY0),
+   .valueToinA(value), // connect this to sumitup's inA
+   .tbSum(tb_sum),      // tb's sum for display
+   .go_l(go_l), 
+   .L0(LED0),         // L0 indicating sums match
+   .outResult(sum_o)
+); // your downstream module's
+                                  // output connected to tb
+
+
+sumitup sumitup 
+	(.clk(CLOCK_50), 
+	 .reset_l(KEY2), 
+	 .go_l(go_l),
+	 .inA(value),
+	 .done(done),
+	 .sum(sum)
+);
+
+
+downstream downstream 
+	(.clk(CLOCK_50), 
+	 .reset_l(KEY2),
+	 .done(done),
+	 .downstream_in(sum),
+         .downstream_out(sum_o)
+	 );
+
+
+bcdtohex hex0
+  (.bcd(sum_o[3:0]),
+   .segment(HEX0)
+   );
+
+
+bcdtohex hex1
+  (
+   .bcd(sum_o[7:4]),
+   .segment(HEX1)
+   );
+
+bcdtohex hex2
+  (
+   .bcd(tb_sum[3:0]),
+   .segment(HEX2)
+   );
+
+bcdtohex hex3
+  (
+   .bcd(tb_sum[7:4]),
+   .segment(HEX3)
+   );
+
+endmodule
